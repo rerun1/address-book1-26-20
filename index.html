@@ -12,25 +12,39 @@
   <body>
     <div class="container">
       <h1>Address Book</h1>
-      <h2>contacts:</h2>
-      <ul id="contactList">
-      </ul>
-      <form id="addContact">
-        <div class="form-group">
-          <label for="contactFirstName">First Name</label>
-          <input type="text" class="form-control" id="contactFirstName">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="addContact">
+            <div class="form-group">
+              <label for="contactFirstName">First Name</label>
+              <input type="text" class="form-control" id="contactFirstName">
+            </div>
+            <div class="form-group">
+              <label for="contactLastName">Last Name</label>
+              <input type="text" class="form-control" id="contactLastName">
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" class="form-control" id="contactPhone" aria-describedby="phoneHelp">
+              <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+          <hr>
+          <h2>Contacts:</h2>
+          <ul id="contactList">
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="contactLastName">Last Name</label>
-          <input type="text" class="form-control" id="contactLastName">
+        <div class="col-md-6">
+          <div id="show-contact">
+            <p>First Name: <span class="first-name"></span> </p>
+            <p>Last Name: <span class="last-name"></span> </p>
+            <p>Phone Number: <span class="phone"></span> </p>
+            <div id="buttons">
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="contactPhone">Phone Number</label>
-          <input type="tel" class="form-control" id="contactPhone" aria-describedby="phoneHelp">
-          <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone.</small>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      </div>
     </div>
   </body>
 </html>
