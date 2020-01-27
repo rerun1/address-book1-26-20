@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.4.1.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/scripts.js" charset="utf-8" type="text/javascript"></script>
+    <title>Address Book</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Address Book</h1>
+      <h2>contacts:</h2>
+      <ul id="contactList">
+      </ul>
+      <form id="addContact">
+        <div class="form-group">
+          <label for="contactFirstName">First Name</label>
+          <input type="text" class="form-control" id="contactFirstName">
+        </div>
+        <div class="form-group">
+          <label for="contactLastName">Last Name</label>
+          <input type="text" class="form-control" id="contactLastName">
+        </div>
+        <div class="form-group">
+          <label for="contactPhone">Phone Number</label>
+          <input type="tel" class="form-control" id="contactPhone" aria-describedby="phoneHelp">
+          <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -55,3 +55,43 @@ function Contact (firstName, lastName, phoneNumber) {
 Contact.prototype.fullName = function(){
   return this.firstName + " " + this.lastName;
 }
+
+// User logic
+var addressBook = new AddressBook();
+
+var resetForm = function(){
+  var inputFirstName = $("input#contactFirstName").val("");
+  var inputLastName = $("input#contactLastName").val("");
+  var inputPhone = $("input#contactPhone").val("");
+}
+
+function displayContactDetails(addressBookToDisplay){
+  var contactsList = $("ul#contactList");
+  var htmlForContactInfo = "";
+  addressBookToDisplay.contacts.forEach(function(contact){
+    htmlForContactInfo += "<li id=" + contact.id + ">"+contact.firstName+" "+contact.lastName+"<br>"+contact.phoneNumber+"</li>";
+  });
+  contactsList.html(htmlForContactInfo);
+}
+
+$(document).ready(function(){
+    $("form#addContact").submit(function(event){
+      event.preventDefault();
+      var inputFirstName = $("input#contactFirstName").val();
+      var inputLastName = $("input#contactLastName").val();
+      var inputPhone = $("input#contactPhone").val();
+
+      var contact = new Contact(inputFirstName,inputLastName,inputPhone);
+
+      addressBook.addContact(contact);
+
+      console.log(addressBook);
+
+      displayContactDetails(addressBook);
+
+
+      resetForm();
+
+
+    });
+});
